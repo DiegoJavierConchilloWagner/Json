@@ -1,0 +1,165 @@
+[
+    {      
+        "id" : 1,
+        "cat": "mates",
+        "name" : "Mate 1",
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 999,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "mates",
+        "name" : "Mate 2",
+        "id" : 2,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 1995,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "mates",
+        "name" : "Mate 3",
+        "id" : 3,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 2999,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "mates",
+        "name" : "Mate 4",
+        "id" : 4,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 3999,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "mates",
+        "name" : "Mate 5",
+        "id" : 5,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 2499,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "termos",
+        "name": "mate 3",
+        "id" : 6,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 4999,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "kitsMateros",
+        "name": "Equipo Matero 1",
+        "id": 7,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 8999,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "todosLosProductos",
+        "name" : "Mate 4",
+        "id" : 8,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 4999,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "todosLosProductos",
+        "name": "mate 5",
+        "id" : 9,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 5499,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "mochilas",
+        "name": "Mochila 1",
+        "id": 10,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 7999,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "todosLosProductos",
+        "name" : "Mate 7",
+        "id" : 11,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 3999,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "todosLosProductos",
+        "name" : "Mate 8",
+        "id" : 12,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 6999,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "todosLosProductos",
+        "name" : "Mate 9",
+        "id" : 13,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 1999,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "todosLosProductos",
+        "name" : "Mate 10",
+        "id" : 14,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 2499,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "todosLosProductos",
+        "name" : "Mate 11",
+        "id" : 15,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 899,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "todosLosProductos",
+        "name" : "Mate 12",
+        "id" : 16,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 799,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "todosLosProductos",
+        "name" : "Mate 13",
+        "id" : 17,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 699,
+        "cantidad": 1,
+        "descripcion": "verde"
+    },
+    {
+        "cat": "todosLosProductos",
+        "name" : "Mate 14",
+        "id" : 18,
+        "img" : "img/EquipoMateroNegroT.png",
+        "price" : 1299,
+        "cantidad": 1,
+        "descripcion": "verde"
+    }
+
+]

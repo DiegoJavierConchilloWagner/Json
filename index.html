@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MateAr</title>
+	<meta name="description=" content="Fabricamos y exportamos mates, bombillas, mochilas materas y todos los accesorios necesarios para tu mate.Envios gratis a todo el pais">
+	<meta name="keywords" content="mates,termos,mochilas,SetsMateros">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="modalNews">
+						<h2 class="modal-title" id="exampleModalLabel">Subscribete al NewsLetter</h2>
+						<hr>
+						<p>Ingresa tu email y recibi nuestros descuentos y ofertas exclusivas!</p>
+						<form action="enviar.php" method="post">
+							<input type="text" name="name" id="name" placeholder="Nombre" required>
+							
+							<input type="email" name="mail" id="mail" placeholder="Email" required>
+
+							<button type="submit" name="send" class="botonNews" id="newsletter">Enviar</button>
+							<button class="botonNews" data-bs-dismiss="modal">Cerrar</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	  
+	<!--Inicia el cuerpo -->
+
+	<header>
+		<section class="header">
+			<section class="contenedorHeader">
+				<nav class="navbar navbar-expand-lg navbar-dark back negro">
+					<div class="container-fluid">
+						<a class="navbar-brand" href="index.html"><img src="img/logoMate6.png"></a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse justify-content-end derecha" id="navbarSupportedContent">
+							<ul class="navbar-nav tamanioLetraNavBar">
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="productos.html">Productos</a>
+								</li>	
+								<li class="nav-item">
+									<a class="nav-link active" href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="quienes-somos.html">Quienes Somos</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="Desafioform.html">Contacto</a>
+								</li>
+								<li class="nav-item">
+									<div class="carrito" onclick="openNav()">
+									<a class="nav-link active bolsa"><i class="fa fa-shopping-bag"aria-hidden="true"></i></a>
+										<span class="icon-carro-vacio" id="carroDeCompras" style="color: black"></span>
+										<div class="cantidadDeProductos">
+											<span class="cantidadDeP" id="cantidadP">0</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</section>
+		</section>
+	</header>
+	<main>
+		<!--seccion que se despliega de la derecha-->
+		<section class="carrito">
+			<div id="myCart" class="cart">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<div class="carritoRender">
+					<div class="grid-product-detalle">
+						<div class="detail detalle-producto">
+							<p>Detalle del Producto</p>
+						</div>
+						<div class="detail cantidad-producto">
+							<p>Cantidad</p>
+						</div>
+						<div class="detail precio-producto">
+							<p>Precio</p>
+						</div>
+					</div>
+					<!-- fin seccion fija del carrito -->
+					<!-- articulos del carrito -->
+					<div class="articulos" id="cart-container">
+						
+					</div>
+					<!-- suma del carrito -->
+					<div class="suma" id="total">
+					
+					</div>
+				</div>
+				<button class="comprar">
+					<i class="fa fa-shopping-bag"aria-hidden="true"></i>Comprar
+				</button>
+				<div class="compra">
+								
+				</div>
+			</div>
+		</section>
+			<!----------------------contenido----------------------------->
+		<!-- slider banner	 -->
+
+		<div id="myCarousel" class="carousel slide">
+			
+			<!-- Indicators -->
+			<ul class="carousel-indicators">
+				<li class="item1 active"></li>
+				<li class="item2"></li>
+				<li class="item3"></li>
+			</ul>
+
+			<!-- The slideshow -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/foco.jpg" alt="Preguntas Frecuentes" width="68.75em" height="31.25rem">
+					<div class="carousel-caption d-none d-md-block">
+						<div class="fila">
+							<div class="columna-2">
+								<h2>Tienes Preguntas?<br>Visita Nuestra Seccion!</h2>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Eius possimus sapiente,<br>
+									fugit distinctio quia explicabo.</p>
+								<a href="preguntas-frecuentes.html" class="boton">Explorar Ahora &#8594;</a>
+							</div>
+							<div class="columna-2">
+								<h2></h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="img/Mockup_Rotulo_Oficinas.jpg" alt="Nuestras Oficinas" width="68.75em" height="31.25rem">
+				</div>
+				<div class="carousel-item">
+					<img src="img/blackFriday6.gif" alt="blackFriday" width="68.75em" height="31.25rem">
+				</div>
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="carousel-control-prev" href="javascript:;">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="javascript:;">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+
+		<!-- Grid -->
+		<section class="gallary container">
+			<figure class="gallary-item item-1">
+				<img src="img/EquipoMateroNegro.jpg" alt="Productos" class="gallary-img">
+				<div class="content">
+					<h2>Nuestros productos populares</h2>
+					<a href="productos.html">Ver Mas</a>
+				</div>
+			</figure>
+
+			<figure class="gallary-item item-2">
+				<img src="img/envioRapido.jpg" alt="Envio Rapido" class="gallary-img">
+				<div class="content">
+					<h2>Envios Express!</h2>
+				</div>
+			</figure>
+
+			<figure class="gallary-item item-3">
+				<img src="img/Mockup_Rotulo_Oficinas.jpg" alt="Nuestras Oficinas" class="gallary-img">
+				<div class="content">
+					<h2>Nuestras Oficinas!</h2>
+				</div>
+			</figure>
+
+			<figure class="gallary-item item-4">
+				<img src="img/blackfridayP.gif" alt="Black Friday" class="gallary-img">
+				<div class="content">
+					<h2>¡Hasta un 70% de descuento!</h2>
+				</div>
+			</figure>
+		</section>
+
+		<div class="contenedorChico">
+			<h2 class="textPD">Productos Destacados</h2>
+			<div class="fila">
+				<div class="columna-4">
+					<a href="productos.html"><img src="img/EquipoMateroNegro.jpg" alt="Equipo MAtero"></a>
+					<h4>Set Matero Negro</h4>
+					<div class="ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<p>$800</p>
+				</div>
+				<div class="columna-4">
+					<a href="productos.html"><img src="img/EquipoMateroNegro.jpg" alt="Equipo MAtero"></a>
+					<h4>Set Matero Negro</h4>
+					<div class="ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+					</div>
+					<p>$800</p>
+				</div>
+				<div class="columna-4">
+					<a href="productos.html"><img src="img/EquipoMateroNegro.jpg" alt="Equipo MAtero"></a>
+					<h4>Set Matero Negro</h4>
+					<div class="ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<p>$800</p>
+				</div>
+				<div class="columna-4">
+					<a href="productos.html"><img src="img/EquipoMateroNegro.jpg" alt="Equipo MAtero"></a>
+					<h4>Set Matero Negro</h4>
+					<div class="ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+					</div>
+					<p>$800</p>
+				</div>
+			</div>
+			<h2 class="textPD">Nuevos Productos</h2>
+			<div class="fila">
+				<div class="columna-4">
+					<a href="productos.html"><img src="img/EquipoMateroNegro.jpg" alt="Equipo MAtero"></a>
+					<h4>Set Matero Negro</h4>
+					<div class="ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<p>$800</p>
+				</div>
+				<div class="columna-4">
+					<a href="productos.html"><img src="img/EquipoMateroNegro.jpg" alt="Equipo MAtero"></a>
+					<h4>Set Matero Negro</h4>
+					<div class="ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+					</div>
+					<p>$800</p>
+				</div>
+				<div class="columna-4">
+					<a href="productos.html"><img src="img/EquipoMateroNegro.jpg" alt="Equipo MAtero"></a>
+					<h4>Set Matero Negro</h4>
+					<div class="ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<p>$800</p>
+				</div>
+				<div class="columna-4">
+					<a href="productos.html"><img src="img/EquipoMateroNegro.jpg" alt="Equipo MAtero"></a>
+					<h4>Set Matero Negro</h4>
+					<div class="ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+					</div>
+					<p>$800</p>
+				</div>
+			</div>
+			<div class="filaM">
+				<div class="columna-4">
+					<a href="productos.html"><img src="img/EquipoMateroNegro.jpg" alt="Equipo MAtero"></a>
+					<h4>Set Matero Negro</h4>
+					<div class="ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<p>$800</p>
+				</div>
+				<div class="columna-4">
+					<a href="productos.html"><img src="img/EquipoMateroNegro.jpg" alt="Equipo MAtero"></a>
+					<h4>Set Matero Negro</h4>
+					<div class="ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+					</div>
+					<p>$800</p>
+				</div>
+				<div class="columna-4">
+					<a href="productos.html"><img src="img/EquipoMateroNegro.jpg" alt="Equipo MAtero"></a>
+					<h4>Set Matero Negro</h4>
+					<div class="ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+					<p>$800</p>
+				</div>
+				<div class="columna-4">
+					<a href="productos.html"><img src="img/EquipoMateroNegro.jpg" alt="Equipo MAtero"></a>
+					<h4>Set Matero Negro</h4>
+					<div class="ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+					</div>
+					<p>$800</p>
+				</div>
+			</div>
+		</div>
+		<div class="oferta">
+			<div class="contenedorChico">
+				<div class="fila">
+					<div class="columna-2">
+						<img src="img/termoStan.png" alt="Termo Stanley" class="ofertaImg">
+					</div>
+					<div class="columna-2">
+						<p>Exclusivo Solo en MateAr</p>
+						<h1>Termo Stanley</h1>
+						<small>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Nesciunt, et nulla
+							dolore!sit amet consectetur, adipisicing elit. Nesciunt, et nulla dolore!sit amet
+							consectetur, adipisicing elit. Nesciunt, et nulla dolore!.</small><br>
+						<a href="productos.html" class="boton">Comprar Ahora</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!---------------------Testiomonios-------------------------->
+		<div class="testimonios">
+			<div class="contenedorChico">
+				<div class="filaM">
+					<div class="columna-3">
+						<i class="fa fa-quote-left"></i>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore eligendi,
+							corporis doloremque, sint ducimus ipsum eos placeat dolorem adipisci necessitatibus
+							iure.</p>
+						<div class="ranking">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<img src="img/user-1.png" alt="usuario 1">
+						<h3>Mariana Ardissone</h3>
+					</div>
+					<div class="columna-3">
+						<i class="fa fa-quote-left"></i>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore eligendi,
+							corporis doloremque, sint ducimus ipsum eos placeat dolorem adipisci necessitatibus
+							iure.</p>
+						<div class="ranking">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+						</div>
+						<img src="img/user-2.png" alt="usuario 2">
+						<h3>Diego Wagner</h3>
+					</div>
+					<div class="columna-3">
+						<i class="fa fa-quote-left"></i>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore eligendi,
+							corporis doloremque, sint ducimus ipsum eos placeat dolorem adipisci necessitatibus
+							iure.</p>
+						<div class="ranking">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<img src="img/user-3.png" alt="usuario 3">
+						<h3>Emma Wardisson</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!---------------------------------Marcas------------------------------->
+		<div class="marcas">
+			<div class="contenedorChico">
+				<div class="filaM">
+					<div class="columna-5">
+						<img src="img/logo-godrej.png" alt="Godrej">
+					</div>
+					<div class="columna-5">
+						<img src="img/logo-oppo.png" alt="Oppo">
+					</div>
+					<div class="columna-5">
+						<img src="img/logo-coca-cola.png" alt="Coca Cola">
+					</div>
+					<div class="columna-5">
+						<img src="img/logo-paypal.png" alt="PayPal">
+					</div>
+					<div class="columna-5">
+						<img src="img/logo-philips.png" alt="Philips">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+	<!--Fin del contenido-->
+	<!--pie de pagina-->
+	<footer class="footer">
+		<section class="footer__seccion">
+			<div class="footer__contenedor">
+				<div class="footer__izquierda">
+					<h2>Nosotros</h2>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Omnis modi asperiores laudantium
+						recusandae quibusdam ea? Velit assumenda nam iure quibusdam est nihil accusamus quo nisi dolorem
+						corrupti? Maxime, quia voluptatum.
+					</p>
+					<ul class="footer__iconos">
+						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+					</ul>
+					<div class="footer__appLogo">
+						<a href=""><img src="img/play-store.png" alt="PlayStore"></a>
+						<a href=""><img src="img/app-store.png" alt="AppStore"></a>
+					</div>
+				</div>
+				<div class="footer__medio">
+					<h2>Links</h2>
+					<ul>
+						<li><a href="#">inicio</a></li>
+						<li><a href="#">productos</a></li>
+						<li><a href="#">preguntas frecuentes</a></li>
+						<li><a href="#">Quienes Somos</a></li>
+						<li><a href="#">Contacto</a></li>
+					</ul>
+
+				</div>
+				
+				<div class="footer__derecha">
+					<h2>Informacion</h2>
+					<ul class="informacionContacto">
+						<li>
+							<span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+							<span>Calle 999 <br>San Miguel, Buenos Aires<br>Argentina</span>
+						</li>
+						<li>
+							<span>
+								<i class="fa fa-phone" aria-hidden="true"></i></span>
+							<p><a href="1139520920">11 3952-0920</a><br><a href="46647339">4664-7339</a></p>
+						</li>
+						<li>
+							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+							<p><a href="Matear@Gmail.com">MateAr@Gmail.com</a></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<div class="footer__copyRightText">
+			<p>Copyright © 2021 Diego Javier Conchillo Wagner. Todos los derechos Reservados.</p>
+		</div>
+	</footer>
+	<!-- FIN PIE DE PAGINA-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+	</script>
+	<script src="js/index.js"></script>
+	<!-- <script defer src="js/data.js "></script> -->
+		<script defer src="js/products.js"></script>
+		<script defer src="js/shoppingCart.js"></script>
+		<script defer src="js/app2.js"></script>
+		<script defer src="js/jquery.js"></script>
+</body>
+</html>
