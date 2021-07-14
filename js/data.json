@@ -7,7 +7,7 @@
                 "id" : 1,
                 "cat": "perros",
                 "name" : "Proplan puppy",
-                "img" : "../../../public/images/producto_13.png",
+                "img" : "../../../src/images/producto_13.png",
                 "alt" : "Proplan puppy",
                 "price" : 6500,
                 "cantidad": 1,
