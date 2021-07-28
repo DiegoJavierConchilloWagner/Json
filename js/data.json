@@ -22,7 +22,6 @@
                 "alt" : "Purina adulto",
                 "price" : 5600,
                 "stock": 15,
-                "cantidad": 15,
                 "descripcion": "Alimento",
                 "longDesc": "Esta es la descripcion del producto en particular la cual se genera mediante el uso del DOM. "
             },
